@@ -1,0 +1,16 @@
+version: '3.8'
+
+networks:
+  shared-network:
+    external: true # 使用已存在的外部网络
+
+services:
+  sleep-time:
+    build: .
+    container_name: sleep_time_app
+    restart: always
+    networks:
+      - shared-network
+    labels:
+      - "app=sleep-time"
+      - "env=production" 
