@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>睡眠时间计算器</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2224%22>🌙</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌙 睡眠时间计算器</h1>
+            <p>根据睡眠周期科学计算最佳入睡时间</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="wake-time">设置起床时间：</label>
+                <input type="time" id="wake-time" value="07:00">
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>💡 睡眠科学小贴士</h3>
+                    <ul>
+                        <li>一个完整的睡眠周期约为90分钟（1.5小时）</li>
+                        <li>在睡眠周期结束时醒来会感觉更清爽</li>
+                        <li>预留30分钟入睡时间更符合实际情况</li>
+                        <li>建议每晚睡眠7-9小时</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="results-section" id="results" style="display: none;">
+                <h2>建议的入睡时间</h2>
+                <div class="sleep-times" id="sleep-times">
+                    <!-- 计算结果将在这里显示 -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>💤 良好的睡眠是健康生活的基础</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
