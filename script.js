@@ -63,7 +63,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function displaySleepTimes(sleepTimes) {
         sleepTimesContainer.innerHTML = '';
 
-        sleepTimes.forEach(sleepTime => {
+        // 按睡眠时长降序排列，睡眠时间长的放前面
+        const sortedSleepTimes = [...sleepTimes].sort((a, b) => b.cycles - a.cycles);
+
+        sortedSleepTimes.forEach(sleepTime => {
             const card = document.createElement('div');
             let cardClass = 'sleep-time-card';
             if (sleepTime.isRecommended) {
